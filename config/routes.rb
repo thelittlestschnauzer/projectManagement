@@ -2,6 +2,8 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   
+  resources :cards
+  resources :lists
   namespace :admin do
     resources :users
     resources :notifications
@@ -9,6 +11,12 @@ Rails.application.routes.draw do
 
 
     root to: "users#index"
+  end
+  
+  resources :announcements, only: [:index]
+  resources :notifcations, only: [:index]
+  authenticate :user, lambda { |u| u.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
   end
 
   devise_scope :user do
@@ -21,5 +29,5 @@ Rails.application.routes.draw do
   
   devise_for :users, skip: :all
 
-  root to: "homes#index"
+  root to: "lists#index"
 end
