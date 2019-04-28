@@ -60,7 +60,7 @@ gem 'sidekiq'
 gem 'font-awesome-sass', '~> 4.7'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'jquery-rails', '~> 4.3.1'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem "bootstrap", ">= 4.3.1"
 gem 'webpacker', '~> 3.0'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-twitter', '~> 1.4'
