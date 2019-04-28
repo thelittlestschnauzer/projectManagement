@@ -1,5 +1,5 @@
 class Announcement < ApplicationRecord
-  before_action :mark_as_read, if: :user_signed_in?
+  before_commit :mark_as_read, if: :user_signed_in?
 
   def index
     @announcements = Announcement.order(published_at: :desc)
