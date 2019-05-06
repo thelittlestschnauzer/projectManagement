@@ -2,16 +2,22 @@
   "name": "projectManagement",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
+    "@rails/webpacker": "^4.0.2",
     "coffeescript": "1.12.7",
     "vue": "^2.6.10",
-    "vue-loader": "14.2.2",
+    "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
     "vue-turbolinks": "^2.0.4",
     "vuedraggable": "^2.20.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "webpack-dev-server": ">=3.1.11"
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "sugarss": "^2.0.0",
+    "webpack-dev-server": "^3.3.1"
   }
 }
