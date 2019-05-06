@@ -11,15 +11,15 @@ import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  var element = document.querySelector("#boards")
+document.addEventListener("turbolinks:load", function() {
+  var element = document.querySelector('#boards')
   if (element != undefined) {
     const app = new Vue({
-      el: element, 
+      el: element,
       data: {
         lists: JSON.parse(element.dataset.lists)
       }, 
-      template: "<App :original_lists='lists' />",
+      template: "<App :original_lists = 'lists' >/",   
       components: { App }
     })
   }

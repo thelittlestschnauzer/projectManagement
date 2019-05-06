@@ -8,15 +8,6 @@
 import Vue from 'vue'
 import App from '../app.vue'
 
-document.addEventListener('DOMContentLoaded', () => {
-  const el = document.body.appendChild(document.createElement('hello'))
-  const app = new Vue({
-    el,
-    render: h => h(App)
-  })
-
-  console.log(app)
-})
 
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would
@@ -47,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 //
 //
-// If the using turbolinks, install 'vue-turbolinks':
+// If the project is using turbolinks, install 'vue-turbolinks':
 //
-// yarn add 'vue-turbolinks'
+// yarn add vue-turbolinks
 //
 // Then uncomment the code block below:
 //
@@ -62,8 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // document.addEventListener('turbolinks:load', () => {
 //   const app = new Vue({
 //     el: '#hello',
-//     data: {
-//       message: "Can you say hello?"
+//     data: () => {
+//       return {
+//         message: "Can you say hello?"
+//       }
 //     },
 //     components: { App }
 //   })

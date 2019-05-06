@@ -61,7 +61,7 @@ gem 'font-awesome-sass', '~> 4.7'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'jquery-rails', '~> 4.3.1'
 gem "bootstrap", ">= 4.3.1"
-gem 'webpacker', '~> 3.0'
+gem 'webpacker', '> 4.0.x'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-twitter', '~> 1.4'
 gem 'omniauth-github', '~> 1.3'
